@@ -1,0 +1,17 @@
+{
+  "name": "manat",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @manat/web",
+    "build": "npm run build -w @manat/web",
+    "start": "npm run start -w @manat/web",
+    "lint": "npm run lint -w @manat/web"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

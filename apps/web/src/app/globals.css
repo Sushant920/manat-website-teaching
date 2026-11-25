@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fcfafe;
+  --foreground: #1a1520;
+  --brand: #905cb5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-brand;
+  }
+
+  .heading-display {
+    @apply font-display font-semibold tracking-tight text-ink;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-brand px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-deep;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border-2 border-brand/30 bg-white px-6 py-3.5 text-sm font-bold text-brand-deep transition-colors hover:border-brand hover:bg-brand-mist;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-brand/25 bg-white px-6 py-3.5 text-sm font-bold text-brand-deep transition-colors hover:border-brand hover:bg-brand-mist;
+  }
+
+  .input-field {
+    @apply h-11 w-full rounded-md border border-ink/10 bg-white px-3.5 text-sm text-ink outline-none transition focus:border-brand;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
